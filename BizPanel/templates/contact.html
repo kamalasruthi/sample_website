@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="text-center text-white d-flex align-items-center justify-content-center"
+         style="height: 50vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+         url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover no-repeat;">
+
+    <div data-aos="fade-up">
+        <h1 class="display-4 fw-bold">Contact Us</h1>
+        <p class="lead mt-3">Let’s Build Something Amazing Together</p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="container mt-5 mb-5">
+    <div class="row g-5">
+
+        <!-- CONTACT INFO -->
+        <div class="col-md-5" data-aos="fade-right">
+            <div class="card p-4 h-100">
+                <h4 class="fw-bold mb-3">Get In Touch</h4>
+                <p>We’d love to hear about your project and how we can help.</p>
+
+                <hr>
+
+                <p><strong>📧 Email:</strong><br> contact@pearltech.com</p>
+                <p><strong>📞 Phone:</strong><br> +91 9876543210</p>
+                <p><strong>📍 Location:</strong><br> Chennai, India</p>
+
+                <hr>
+
+                <p class="small">
+                    Our team typically responds within 24 hours.
+                </p>
+            </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="col-md-7" data-aos="fade-left">
+            <div class="card p-4">
+                <h4 class="fw-bold mb-3 text-center">Send a Message</h4>
+
+                <form method="POST">
+                    
+                    <div class="mb-3">
+                        <input type="text" name="name" 
+                               class="form-control rounded-pill"
+                               placeholder="Your Name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" name="email" 
+                               class="form-control rounded-pill"
+                               placeholder="Your Email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" name="subject" 
+                               class="form-control rounded-pill"
+                               placeholder="Subject" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea name="message" rows="5"
+                                  class="form-control rounded-4"
+                                  placeholder="Your Message" required></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">
+                            Send Message
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- GOOGLE MAP -->
+<section class="container mb-5" data-aos="fade-up">
+    <div class="card p-3">
+        <h5 class="text-center mb-3">Our Location</h5>
+        <iframe 
+            src="https://www.google.com/maps?q=Chennai,India&output=embed"
+            width="100%" height="300" style="border:0; border-radius:15px;"
+            allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+{% endblock %}

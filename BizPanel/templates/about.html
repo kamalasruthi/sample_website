@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="text-center text-white d-flex align-items-center justify-content-center"
+         style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+         url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover no-repeat;">
+
+    <div data-aos="fade-up">
+        <h1 class="display-4 fw-bold">About Pearl Tech Solutions</h1>
+        <p class="lead mt-3">Empowering Businesses Through Innovation & Technology</p>
+    </div>
+</section>
+
+<!-- COMPANY INTRO -->
+<section class="container mt-5 mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+            <h2 class="fw-bold">Who We Are</h2>
+            <p>
+                Pearl Tech Solutions is a forward-thinking IT startup dedicated to
+                delivering innovative, scalable, and secure digital solutions.
+                We specialize in full-stack development, AI-powered systems,
+                enterprise applications, and digital transformation services.
+            </p>
+            <p>
+                Our team is passionate about technology and committed to helping
+                businesses grow with modern, future-ready solutions.
+            </p>
+        </div>
+
+        <div class="col-md-6 text-center" data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                 class="img-fluid rounded shadow"
+                 style="max-height:400px; object-fit:cover;">
+        </div>
+    </div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="py-5" style="background: rgba(255,255,255,0.05);">
+    <div class="container">
+        <div class="row text-center">
+
+            <div class="col-md-6 mb-4" data-aos="fade-up">
+                <div class="card p-4">
+                    <h3 class="fw-bold">🌍 Our Vision</h3>
+                    <p>
+                        To become a global leader in digital innovation,
+                        transforming businesses through cutting-edge technology
+                        and sustainable solutions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card p-4">
+                    <h3 class="fw-bold">🎯 Our Mission</h3>
+                    <p>
+                        Deliver high-quality, secure, and scalable IT services
+                        that empower organizations to achieve operational excellence
+                        and long-term growth.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMPANY VALUES -->
+<section class="container py-5">
+    <div class="text-center mb-4" data-aos="fade-down">
+        <h2 class="fw-bold">Our Core Values</h2>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4 mb-4" data-aos="zoom-in">
+            <h5>💡 Innovation</h5>
+            <p>We embrace emerging technologies to stay ahead of the curve.</p>
+        </div>
+
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="150">
+            <h5>🤝 Integrity</h5>
+            <p>We build trust through transparency and ethical practices.</p>
+        </div>
+
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <h5>🚀 Excellence</h5>
+            <p>We strive for perfection in every solution we deliver.</p>
+        </div>
+    </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="py-5 text-center" style="background: rgba(255,255,255,0.05);">
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+
+            <div class="col-md-4">
+                <h2 class="fw-bold" id="clientsCount">0</h2>
+                <p>Happy Clients</p>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="fw-bold" id="projectsCount">0</h2>
+                <p>Projects Delivered</p>
+            </div>
+
+            <div class="col-md-4">
+                <h2 class="fw-bold" id="experienceCount">0</h2>
+                <p>Years of Experience</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- COUNTER SCRIPT -->
+<script>
+function animateCounter(id, target) {
+    let count = 0;
+    const increment = target / 100;
+
+    const updateCounter = () => {
+        count += increment;
+        if (count < target) {
+            document.getElementById(id).innerText = Math.floor(count);
+            requestAnimationFrame(updateCounter);
+        } else {
+            document.getElementById(id).innerText = target;
+        }
+    };
+
+    updateCounter();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    animateCounter("clientsCount", 120);
+    animateCounter("projectsCount", 85);
+    animateCounter("experienceCount", 5);
+});
+</script>
+
+{% endblock %}
